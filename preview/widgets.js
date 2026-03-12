@@ -87,22 +87,22 @@ function renderMediaStepsWidget({ variant = "light" } = {}) {
   const isDark = variant === "dark";
   const cards = [
     {
-      src: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_1.png",
+      src: "./assets/images/steps_1.png",
       title: "Apply in minutes",
       description: "A short application flow pre-fills profile data, reduces drop-off, and gives candidates momentum from the first click."
     },
     {
-      src: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_2.png",
+      src: "./assets/images/steps_2.png",
       title: "Get matched",
       description: "Role-fit scoring surfaces the best opportunities first while keeping transparent alternatives visible."
     },
     {
-      src: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_3.png",
+      src: "./assets/images/steps_3.png",
       title: "Meet the team",
       description: "Scheduling automation finds the fastest overlap and sends context-rich reminders before every interview."
     },
     {
-      src: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_4.png",
+      src: "./assets/images/steps_4.png",
       title: "Start confidently",
       description: "Day-one onboarding includes ownership, milestones, and the right handoffs so new hires can contribute sooner."
     }
@@ -161,19 +161,19 @@ function renderVideoPopupWidget({ variant = "light" } = {}) {
     {
       title: "Inside our engineering culture",
       subtitle: "Team leads explain delivery rituals and decision-making.",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_1.png",
+      imageSrc: "./assets/images/steps_1.png",
       videoSrc: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
     },
     {
       title: "Hiring manager interview walkthrough",
       subtitle: "What happens after application review and how feedback is shared.",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_2.png",
+      imageSrc: "./assets/images/steps_2.png",
       videoSrc: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
     },
     {
       title: "Day-one onboarding preview",
       subtitle: "See how workspace setup and role goals are introduced.",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_3.png",
+      imageSrc: "./assets/images/steps_3.png",
       videoSrc: ""
     }
   ];
@@ -246,7 +246,7 @@ function renderEventRecommendationWidget({ variant = "light" } = {}) {
       date: "Apr 18",
       topic: "AI Hiring",
       location: "Kyiv, UA",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_1.png",
+      imageSrc: "./assets/images/steps_1.png",
       href: "#"
     },
     {
@@ -255,7 +255,7 @@ function renderEventRecommendationWidget({ variant = "light" } = {}) {
       date: "May 02",
       topic: "Brand",
       location: "Berlin, DE",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_2.png",
+      imageSrc: "./assets/images/steps_2.png",
       href: "#"
     },
     {
@@ -264,7 +264,7 @@ function renderEventRecommendationWidget({ variant = "light" } = {}) {
       date: "May 09",
       topic: "Operations",
       location: "Remote",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_3.png",
+      imageSrc: "./assets/images/steps_3.png",
       href: "#"
     },
     {
@@ -273,7 +273,7 @@ function renderEventRecommendationWidget({ variant = "light" } = {}) {
       date: "Jun 14",
       topic: "Early Careers",
       location: "Warsaw, PL",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_4.png",
+      imageSrc: "./assets/images/steps_4.png",
       href: "#"
     }
   ];
@@ -451,7 +451,7 @@ function renderCompanyProjectsWidget({ variant = "light" } = {}) {
         "Fast-track path for future store managers: coaching, P&L fundamentals, and hands-on leadership in high-traffic locations.",
       ctaLabel: "Learn about store leadership roles",
       ctaHref: "#",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_1.png"
+      imageSrc: "./assets/images/steps_1.png"
     },
     {
       name: "Visual Merchandising Team",
@@ -459,7 +459,7 @@ function renderCompanyProjectsWidget({ variant = "light" } = {}) {
         "Create seasonal floor sets, optimize product storytelling, and deliver in-store experiences that drive conversion.",
       ctaLabel: "Explore merchandising careers",
       ctaHref: "#",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_2.png"
+      imageSrc: "./assets/images/steps_2.png"
     },
     {
       name: "Supply Chain & Logistics",
@@ -467,7 +467,7 @@ function renderCompanyProjectsWidget({ variant = "light" } = {}) {
         "Keep inventory moving from distribution centers to stores with real-time planning, vendor coordination, and replenishment analytics.",
       ctaLabel: "See logistics opportunities",
       ctaHref: "#",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_3.png"
+      imageSrc: "./assets/images/steps_3.png"
     },
     {
       name: "E-commerce Product Team",
@@ -475,7 +475,7 @@ function renderCompanyProjectsWidget({ variant = "light" } = {}) {
         "Build online shopping journeys: search, recommendations, checkout, and post-purchase flows for millions of customers.",
       ctaLabel: "View digital product roles",
       ctaHref: "#",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_4.png"
+      imageSrc: "./assets/images/steps_4.png"
     },
     {
       name: "Customer Experience Operations",
@@ -483,7 +483,7 @@ function renderCompanyProjectsWidget({ variant = "light" } = {}) {
         "Support store and online customers through service design, issue resolution, and quality standards that build loyalty.",
       ctaLabel: "Discover customer experience jobs",
       ctaHref: "#",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_2.png"
+      imageSrc: "./assets/images/steps_2.png"
     }
   ];
 
@@ -666,8 +666,8 @@ function renderPromoBannerWidget({ variant = "light" } = {}) {
     secondaryCtaLabel: "Explore Teams",
     secondaryCtaHref: "#",
     imageSrc: isDark
-      ? "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_3.png"
-      : "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_4.png"
+      ? "./assets/images/steps_3.png"
+      : "./assets/images/steps_4.png"
   };
 
   return container(
@@ -722,7 +722,7 @@ function renderClassicCardGridWidget() {
       title: "Unified content structure",
       description:
         "Use one durable layout model across hiring pages, employer brand blocks, and campaign sections to keep implementation and governance simple.",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_1.png",
+      imageSrc: "./assets/images/steps_1.png",
       imageAlt: "Unified content structure illustration",
       ctaLabel: "Read guidelines",
       ctaHref: "#"
@@ -732,7 +732,7 @@ function renderClassicCardGridWidget() {
       title: "Responsive by default",
       description:
         "Cards keep alignment and spacing quality from mobile to widescreen while preserving visual hierarchy and clear scanning order.",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_2.png",
+      imageSrc: "./assets/images/steps_2.png",
       imageAlt: "Responsive card layout example",
       ctaLabel: "View layout rules",
       ctaHref: "#"
@@ -742,7 +742,7 @@ function renderClassicCardGridWidget() {
       title: "Design-system composition",
       description:
         "Each card is assembled from existing DS primitives, making visual updates straightforward and reducing one-off implementation drift.",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_3.png",
+      imageSrc: "./assets/images/steps_3.png",
       imageAlt: "Design system components overview",
       ctaLabel: "Open DS reference",
       ctaHref: "#"
@@ -752,7 +752,7 @@ function renderClassicCardGridWidget() {
       title: "Editorial content tolerance",
       description:
         "The composition supports short and long text without collapsing spacing, clipping content, or forcing visual hacks in templates.",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_4.png",
+      imageSrc: "./assets/images/steps_4.png",
       imageAlt: "Readable content layout",
       ctaLabel: "See content rules",
       ctaHref: "#"
@@ -762,7 +762,7 @@ function renderClassicCardGridWidget() {
       title: "Implementation-ready handoff",
       description:
         "The widget can be mapped directly to CMS fields with clear required/optional groups and repeatable structures for long-term maintainability.",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_2.png",
+      imageSrc: "./assets/images/steps_2.png",
       imageAlt: "Implementation handoff package",
       ctaLabel: "Review handoff",
       ctaHref: "#"
@@ -772,7 +772,7 @@ function renderClassicCardGridWidget() {
       title: "Consistent visual polish",
       description:
         "Subtle hover feedback, dependable spacing, and restrained accents keep the grid professional for static, evergreen information.",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_1.png",
+      imageSrc: "./assets/images/steps_1.png",
       imageAlt: "Polished static content cards",
       ctaLabel: "View quality checklist",
       ctaHref: "#"
@@ -834,7 +834,7 @@ function renderFullImageCardGridWidget() {
       description: "Align teams around one structure so content, layout, and implementation stay coherent across releases.",
       ctaLabel: "Read principle",
       ctaHref: "#",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_1.png",
+      imageSrc: "./assets/images/steps_1.png",
       imageAlt: "Team collaboration space"
     },
     {
@@ -843,7 +843,7 @@ function renderFullImageCardGridWidget() {
       description: "Use consistent compositions that scale from campaign pages to evergreen platform content.",
       ctaLabel: "Open section guide",
       ctaHref: "#",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_2.png",
+      imageSrc: "./assets/images/steps_2.png",
       imageAlt: "Reusable page section preview"
     },
     {
@@ -852,7 +852,7 @@ function renderFullImageCardGridWidget() {
       description: "Token-based spacing prevents visual drift and preserves hierarchy across breakpoints.",
       ctaLabel: "View spacing rules",
       ctaHref: "#",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_3.png",
+      imageSrc: "./assets/images/steps_3.png",
       imageAlt: "Structured UI layout"
     },
     {
@@ -861,7 +861,7 @@ function renderFullImageCardGridWidget() {
       description: "Layered scrims keep text contrast reliable on diverse imagery and in varied lighting conditions.",
       ctaLabel: "See accessibility notes",
       ctaHref: "#",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_4.png",
+      imageSrc: "./assets/images/steps_4.png",
       imageAlt: "Overlay contrast example"
     },
     {
@@ -870,7 +870,7 @@ function renderFullImageCardGridWidget() {
       description: "Separate required and optional fields so editors can update safely without breaking card balance.",
       ctaLabel: "Review content model",
       ctaHref: "#",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_2.png",
+      imageSrc: "./assets/images/steps_2.png",
       imageAlt: "Content governance model"
     },
     {
@@ -879,7 +879,7 @@ function renderFullImageCardGridWidget() {
       description: "Hover behavior guides attention without visual noise, while reduced-motion still feels complete.",
       ctaLabel: "Explore interactions",
       ctaHref: "#",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_1.png",
+      imageSrc: "./assets/images/steps_1.png",
       imageAlt: "Meaningful interaction states"
     }
   ];
@@ -940,7 +940,7 @@ function renderFullImageCardGridDynamicWidget() {
       description: "Align teams around one structure so content, layout, and implementation stay coherent across releases.",
       ctaLabel: "Read principle",
       ctaHref: "#",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_1.png",
+      imageSrc: "./assets/images/steps_1.png",
       imageAlt: "Team collaboration space"
     },
     {
@@ -949,7 +949,7 @@ function renderFullImageCardGridDynamicWidget() {
       description: "Use consistent compositions that scale from campaign pages to evergreen platform content.",
       ctaLabel: "Open section guide",
       ctaHref: "#",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_2.png",
+      imageSrc: "./assets/images/steps_2.png",
       imageAlt: "Reusable page section preview"
     },
     {
@@ -958,7 +958,7 @@ function renderFullImageCardGridDynamicWidget() {
       description: "Token-based spacing prevents visual drift and preserves hierarchy across breakpoints.",
       ctaLabel: "View spacing rules",
       ctaHref: "#",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_3.png",
+      imageSrc: "./assets/images/steps_3.png",
       imageAlt: "Structured UI layout"
     },
     {
@@ -967,7 +967,7 @@ function renderFullImageCardGridDynamicWidget() {
       description: "Layered scrims keep text contrast reliable on diverse imagery and in varied lighting conditions.",
       ctaLabel: "See accessibility notes",
       ctaHref: "#",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_4.png",
+      imageSrc: "./assets/images/steps_4.png",
       imageAlt: "Overlay contrast example"
     },
     {
@@ -976,7 +976,7 @@ function renderFullImageCardGridDynamicWidget() {
       description: "Separate required and optional fields so editors can update safely without breaking card balance.",
       ctaLabel: "Review content model",
       ctaHref: "#",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_2.png",
+      imageSrc: "./assets/images/steps_2.png",
       imageAlt: "Content governance model"
     },
     {
@@ -985,7 +985,7 @@ function renderFullImageCardGridDynamicWidget() {
       description: "Hover behavior guides attention without visual noise, while reduced-motion still feels complete.",
       ctaLabel: "Explore interactions",
       ctaHref: "#",
-      imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_1.png",
+      imageSrc: "./assets/images/steps_1.png",
       imageAlt: "Meaningful interaction states"
     }
   ];
@@ -1094,7 +1094,7 @@ function renderHeroSearchBannerWidget() {
     title: "Find your next role with teams that build what matters.",
     subtitle:
       "Search by role or department, then choose your preferred location. This hero uses a full-bleed image layer and content-first search controls.",
-    imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_4.png",
+    imageSrc: "./assets/images/steps_4.png",
     imageAlt: "People collaborating in a modern workplace",
     rolePlaceholder: "Role or department",
     locationPlaceholder: "Location",
@@ -1203,7 +1203,7 @@ function renderHeroSearchBannerCenteredWidget() {
     title: "Find your next role with teams that build what matters.",
     subtitle:
       "Search by role or department, then choose your preferred location. This centered variant aligns content to the middle of the hero for stronger intro focus.",
-    imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_3.png",
+    imageSrc: "./assets/images/steps_3.png",
     imageAlt: "People collaborating in a modern workplace",
     rolePlaceholder: "Role or department",
     locationPlaceholder: "Location",
@@ -1255,7 +1255,7 @@ function renderHeroSearchBannerCenteredButtonsWidget() {
     title: "Find your next role with teams that build what matters.",
     subtitle:
       "Explore opportunities or learn more about teams. This variant replaces search inputs with direct actions.",
-    imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_2.png",
+    imageSrc: "./assets/images/steps_2.png",
     imageAlt: "People collaborating in a modern workplace",
     primaryCtaLabel: "Browse jobs",
     secondaryCtaLabel: "Learn about teams"
@@ -1295,7 +1295,7 @@ function renderHorizontalSplitCardWidget() {
     title: "Build products with fast-moving, collaborative teams.",
     subtitle:
       "Join engineers, designers, and product leaders shipping customer-facing experiences with clear ownership and modern tooling.",
-    imageSrc: "../src-widgets/phw-static-media-card-view31-v1/phw-static-media-card-view31-v1/assets/images/steps_1.png",
+    imageSrc: "./assets/images/steps_1.png",
     imageAlt: "Team collaborating around a desk",
     primaryCtaLabel: "Explore roles",
     secondaryCtaLabel: "Meet the team"
@@ -1939,6 +1939,7 @@ export function renderWidget(definition) {
     ${definition.render()}
   </section>`;
 }
+
 
 
 
