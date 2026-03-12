@@ -1,0 +1,104 @@
+﻿<div class="phw-widget-ctr phw-hvs-widget" data-ps="hvs-div-1">
+  <div class="phw-container phw-hvs-container" data-ps="hvs-div-2">
+    <section class="phw-hvs-hero" role="region" aria-label="Career hero search" data-ps="hvs-section-1">
+      <video class="phw-hvs-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true" data-ps="hvs-video-1">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+      </video>
+      <div class="phw-hvs-overlay" data-ps="hvs-div-3"></div>
+
+      <button
+        type="button"
+        class="phw-btn phw-g-btn-secondary phw-hvs-toggle"
+        data-hvs-video-toggle
+        aria-label="Pause background video"
+        aria-pressed="false"
+        data-ps="hvs-button-1"
+      >
+        <span class="phw-icon-ctr" aria-hidden="true" data-hvs-toggle-icon>
+          <svg class="phw-hvs-icon" viewBox="0 0 24 24" fill="none">
+            <path d="M9 7V17M15 7V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </span>
+      </button>
+
+      <div class="phw-hvs-content" data-ps="hvs-div-4">
+        <div class="phw-hvs-copy" data-ps="hvs-div-5">
+          <p class="phw-hvs-caption" data-map-id="widget-caption" data-component="widget-caption">Careers</p>
+          <h2 data-map-id="widget-heading" data-component="widget-title" data-ps="hvs-h2-1">
+            See the culture, then search the role that fits your growth.
+          </h2>
+          <div
+            class="phw-hvs-subtitle"
+            data-tag-type="p"
+            data-map-id="widget-sub-heading"
+            data-component="widget-subtitle"
+            data-ps="hvs-p-1"
+          >
+            Autoplay background video adds atmosphere while search stays clear and accessible across mobile, tablet,
+            desktop, and widescreen.
+          </div>
+        </div>
+
+        <form class="phw-hvs-form" action="javascript:void(0)" method="get" role="search" aria-label="Job search" data-ps="hvs-form-1">
+          <label class="phw-sr-only" for="hvs-role">Role or department</label>
+          <input
+            id="hvs-role"
+            name="role"
+            type="text"
+            placeholder="Role or department"
+            class="phw-hvs-input"
+            data-map-id="search-role"
+            data-component="search-role"
+          />
+
+          <label class="phw-sr-only" for="hvs-location">Location</label>
+          <input
+            id="hvs-location"
+            name="location"
+            type="text"
+            placeholder="Location"
+            class="phw-hvs-input"
+            data-map-id="search-location"
+            data-component="search-location"
+          />
+
+          <button type="submit" class="phw-btn phw-g-btn-primary phw-hvs-submit" data-map-id="widget-action-link" data-component="widget-link">
+            Search jobs
+          </button>
+        </form>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const widget = document.querySelector('.phw-hvs-widget');
+    if (!widget) return;
+
+    const toggle = widget.querySelector('[data-hvs-video-toggle]');
+    const iconSlot = widget.querySelector('[data-hvs-toggle-icon]');
+    const video = widget.querySelector('.phw-hvs-video');
+    if (!toggle || !iconSlot || !video) return;
+
+    const playIcon = '<svg class="phw-hvs-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 6.5L18 12L8.5 17.5V6.5Z"></path></svg>';
+    const pauseIcon = '<svg class="phw-hvs-icon" viewBox="0 0 24 24" fill="none"><path d="M9 7V17M15 7V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>';
+
+    toggle.addEventListener('click', function () {
+      if (video.paused) {
+        const playPromise = video.play();
+        if (playPromise && typeof playPromise.catch === 'function') {
+          playPromise.catch(function () {});
+        }
+        iconSlot.innerHTML = pauseIcon;
+        toggle.setAttribute('aria-pressed', 'false');
+        toggle.setAttribute('aria-label', 'Pause background video');
+      } else {
+        video.pause();
+        iconSlot.innerHTML = playIcon;
+        toggle.setAttribute('aria-pressed', 'true');
+        toggle.setAttribute('aria-label', 'Play background video');
+      }
+    });
+  })();
+</script>

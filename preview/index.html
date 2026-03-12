@@ -1,0 +1,75 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Widget Rebuild Preview</title>
+    <link rel="stylesheet" href="../design-system/html-first/tokens/theme.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="preview-header">
+      <div class="preview-header-inner">
+        <div>
+          <h1 class="controls-title">Widget Rebuild</h1>
+          <a class="ds-link" href="./library.html">Open Design System Library</a>
+        </div>
+        <div id="widgetNav"></div>
+      </div>
+    </header>
+
+    <main class="preview-layout">
+      <section class="preview-main">
+        <div class="preview-canvas-wrap">
+          <div id="previewCanvas" class="preview-canvas"></div>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="videoDialog" class="video-dialog">
+      <form method="dialog" class="video-dialog-header">
+        <p id="videoDialogTitle" class="video-dialog-title">Video</p>
+        <button class="video-dialog-close" aria-label="Close video">Close</button>
+      </form>
+      <div class="video-dialog-body">
+        <video id="videoDialogPlayer" controls preload="metadata" class="video-player"></video>
+        <p id="videoDialogFallback" class="video-fallback" hidden>
+          No video URL assigned. Add your CMS/video source to the widget data.
+        </p>
+      </div>
+    </dialog>
+
+    <dialog id="resumeDialog" class="resume-dialog">
+      <form method="dialog" class="resume-dialog-header">
+        <p class="resume-dialog-title">Find better job matches with your resume</p>
+        <button class="resume-dialog-close" aria-label="Close resume upload">Close</button>
+      </form>
+      <div class="resume-dialog-body">
+        <p class="resume-dialog-copy">Your resume helps us recommend jobs that match your skills and experience.</p>
+        <label class="resume-upload-dropzone" for="resumeUploadInput">
+          <span class="resume-upload-icon-wrap">↑</span>
+          <span class="resume-upload-line">
+            Drop resume file here or
+            <span class="resume-upload-link">select a file to upload</span>
+          </span>
+          <span class="resume-upload-hint">All .pdf, .doc, .docx, .txt types are supported, up to 1MB</span>
+          <input id="resumeUploadInput" name="resume" type="file" accept=".pdf,.doc,.docx,.txt" class="resume-upload-input" />
+        </label>
+        <label class="resume-consent">
+          <input id="resumeConsentInput" type="checkbox" />
+          <span>I have read and accept the <a href="#" class="phw-inline-link">privacy policy</a> and <a href="#" class="phw-inline-link">terms of use</a> *</span>
+        </label>
+        <p id="resumeSelectedFile" class="resume-selected-file" aria-live="polite"></p>
+        <div class="resume-dialog-actions">
+          <button type="button" class="phw-btn phw-btn-tertiary phw-btn-inline" data-resume-cancel="true">Cancel</button>
+          <button type="button" class="phw-btn phw-btn-primary phw-btn-inline" id="resumeSubmitButton" disabled>Get My Matches</button>
+        </div>
+      </div>
+    </dialog>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
+
+
+

@@ -1,0 +1,1932 @@
+Browsers and devices
+Phenom supports the latest, stable releases of all major browsers.
+
+Desktop browsers
+Similarly, the latest versions of most desktop browsers are supported.
+
+ 
+
+Chrome
+
+Firefox
+
+Microsoft Edge
+
+Safari
+
+Mac
+
+Supported
+
+Supported
+
+-
+
+Supported
+
+Windows
+
+Supported
+
+Supported
+
+Supported
+
+—
+
+Mobile devices
+Phenom supports the latest versions of each major platform’s default browsers. Note that proxy browsers (such as Opera Mini, Opera Mobile’s Turbo mode, UC Browser Mini, Amazon Silk) are not supported.
+
+ 
+
+Chrome
+
+Safari
+
+Android Browser & WebView
+
+Microsoft Edge
+
+Android
+
+Supported
+
+—
+
+v6.0+
+
+—
+
+Windows
+
+Supported
+
+—
+
+—
+
+Supported
+
+Mac / IOS
+
+—
+
+Supported
+
+—
+
+—
+
+ 
+
+CSS variables
+Phenom includes many custom properties in its compiled CSS for real-time customization without the need to recompile. These provide easy access to commonly used values like our theme colors and primary font stacks when working in your browser’s inspector, a code sandbox, or general prototyping.
+
+Note CSS variables do not work in media queries.
+
+While we include our breakpoints as CSS variables, be aware that CSS variables do not work in media queries. This is by design in the CSS spec for variables, but may change in coming years with support for env() variables. For now we will follow the standard breakpoints.
+
+Root variables
+Here are the variables we include (note that the :root is required) that can be accessed anywhere career site CSS is loaded. They’re located in two files reset and non reset variables
+
+non reset  variables will be  master-root-variables.less file.
+
+reset variables will be  root-variables.less file.
+
+Master root variables
+
+
+
+:root{
+    // Grid
+    --grid-rows : 1;
+    --grid-columns:12;
+    --grid-gutter-space:1rem;
+    // zindexs
+    --zindex-dropdown:                   98;
+    --zindex-sticky:                     99;
+    --zindex-fixed:                      99;
+    --zindex-1:                          1;
+    --zindex-modal-backdrop:             1050;
+    --zindex-modal:                      1055;
+    // Spinner
+    --spinner-width: 2rem;
+    --spinner-height: 2rem;
+    --spinner-vertical-align: -0.125em;
+    --spinner-border-width: 0.25em;
+    --spinner-animation-speed: 0.75s;
+}
+ 
+
+Reset root variables
+
+
+
+:root {
+    --phw-g-primary-font-family: 'Source Sans Pro', sans-serif;
+    --phw-g-secondary-font-family: var(--phw-g-primary-font-family);
+    /* Brand colors */
+    --brand-color-primary: #5335a8; /*global brand color*/
+    --brand-color-secondary: #ffffff; /*global brand color*/
+    /* brand color primary with opacity */
+    --brand-color-primary-60: color-mix(in oklch, transparent, var(--brand-color-primary) 60%);
+    --brand-color-primary-40: color-mix(in oklch, transparent, var(--brand-color-primary) 40%);
+    /* Standrad colors */
+    --black: #272727; /*global brand color*/
+    --white: #ffffff; /*global brand color*/
+    /* Text colors */
+    --text-dark: #4e4e4e; /*global brand color*/
+    --secondary-text: #777777; /*global brand color*/
+    --light-text: #bdbdbd; /*global brand color*/
+    --placeholder-text-color-1: #a0a0a0; /*global brand color*/
+    /* Font Size */
+    --font-size-1: 56px; /*global variable*/
+    --font-size-2: 44px; /*global variable*/
+    --font-size-3: 28px; /*global variable*/
+    --font-size-4: 24px; /*global variable*/
+    --font-size-5: 20px; /*global variable*/
+    --font-size-6: 16px; /*global variable*/
+    --font-size-7: 18px; /*global variable*/
+    --font-size-8: 60px; /*global variable*/
+    --font-size-9: 80px; /*global variable*/
+    --font-size-10: 280px; /*global variable*/
+    --font-size-11: 42px; /*heading font size tablet*/
+    --font-size-12: 36px; /*widget heading font size tab*/
+    --font-size-13: 22px; /*card title tab*/
+    --font-size-14: 168px; /*404 font size tab*/
+    --font-size-15: 14px; /*paragraph font size tab*/
+    --font-size-16: 48px; /*font size mobile*/
+    --font-size-17: 88px; /*font-size mobile*/
+    /* line height */
+    --line-height-1: 1.25;
+    --line-height-2: 1.25;
+    --line-height-3: 1.25;
+    --line-height-4: 1.25;
+    --line-height-5: 1.6;
+    --line-height-6: 1.25;
+    /* Body styles */
+    --body-font-family: var(--phw-g-primary-font-family); /*global variable*/
+    --body-font-size: var(--phw-g-small-text-font-size); /*global variable*/
+    --body-font-weight: 400;
+    --body-line-height: 1.5; /*global variable*/
+    --body-color: #4e4e4e; /*global variable*/
+    --body-bg: #fff; /*global variable*/
+    --header-bg: var(--white); /*header fixed default bg*/
+    /* Container */
+    --grid-container: 88%;
+    --grid-container-max: 1688px;
+    --container-top-space: 128px;
+    --container-bottom-space: 128px;
+    --grid-gutter-space: calc(var(--mu-space) * 5);
+    --widget-header-content-block-between-space: calc(var(--pu-space) * 8);
+    --widget-content-footer-block-between-space: calc(var(--pu-space) * 8);
+    /* Paragraph Font Size*/
+    --paragraph-font-size-1: var(--phw-g-small-text-font-size); /*global variable*/
+    --paragraph-font-size-2: var(--phw-g-regular-text-font-size); /*global variable*/
+    --paragraph-font-size-3: var(--phw-g-cards-subtitle-font-size); /*global variable*/
+    /* Paragraph line height */
+    --paragraph-line-height-1: 1.25;
+    --paragraph-line-height-2: 1.6;
+    --paragraph-line-height-3: 1.6;
+    /* Number */
+    --number-heading-font-size: var(--phw-g-numbers-font-size); /*global variable*/
+    --number-heading-line-height: 1.25; /*global variable*/
+    /* widget sub heading font size*/
+    --widget-subheading-style1: var(--phw-g-widget-subheading-font-size); /*global variable*/
+    --widget-subheading-line-height-1: 1; /*global variable*/
+    /* Menu-list and footer */
+    --menu-list-font-size: var(--phw-g-cards-subtitle-font-size); /*global variable*/
+    --menu-list-line-height: 1.25; /*global variable*/
+    --footer-menu-list-font-size: var(--phw-g-cards-subtitle-font-size); /*global variable*/
+    --footer-menu-list-line-height: 1.25; /*global variable*/
+    --footer-menu-list-font-size-style-1: var(--phw-g-regular-text-font-size); /*global variable*/
+    --footer-menu-list-line-height-style-1: 1.3; /*global variable*/
+    /* Icon colors */
+    --icon-dark: var(--text-dark); /*global brand color*/
+    --icon-light: var(--placeholder-text-color-1); /*global brand color*/
+    /* Link colors */
+    --link-color: var(--brand-color-primary); /*global brand color*/
+    --link-hover-color: var(--brand-color-primary); /*global brand color*/
+    --link-hover-decoration: underline; /*global brand color*/
+    --visited-color: #681da8; /*global brand color*/
+    /* Slider colors */
+    --slider-pagination-bg-color: #a0a0a0; /*global brand color*/
+    --slider-pagination-bg-active-color: var(--brand-color-primary); /*global brand color*/
+    /* Slider pagination opacity */
+    --slider-pagination-opacity: 0.7;
+    --slider-pagination-opacity-active: 1;
+    --slider-pagination-opacity-hover: 0.9;
+    /* Background colors */
+    --widget-bg-dark-color: #130606;
+    --widget-bg-gray-color: #f2f2f2;
+    --widget-bg-white-color: #fff;
+    --icon-bg-primary-color-light: #5335a826;
+    --widget-bg-primary-color: var(--brand-color-primary);
+    --widget-bg-gradient-color: linear-gradient(116deg, #131051 3.08%, #5c41a6 95.75%);
+    --modal-bg: var(--white);
+    --modal-width: 824px;
+    --modal-width-sm: 640px;
+    --modal-width-md: 824px;
+    --modal-width-lg: 90%;
+    /*video modal*/
+    --video-modal-bg:var(--white);
+    --video-modal-width: 824px;
+    --video-modal-width-sm: 640px;
+    --video-modal-width-md: 824px;
+    --video-modal-width-lg: 90%;
+    /* Stroke */
+    --stroke-dark: #bdbdbd; /*global variable*/
+    --stroke-primary:var(--brand-color-primary);
+    /* loader color */
+    --loader-color: var(--brand-color-primary);
+    /* Border radius */
+    --border-radius-base: 8px; /*global variable*/
+    --card-border-radius: 0; /*global variable*/
+    --modal-border-radius: 0; /*global variable*/
+    --image-border-radius: 0; /*global variable*/
+    --chips-border-radius: 8px; /*global variable*/
+    /* Spacings */
+    --mu-space: 8px;
+    --pu-space: 8px;
+    --su-space: 8px;
+    /* Notification colors */
+    --alert-success: #3ba169;
+    --alert-error: #c31313;
+    --alert-focus: #005b78;
+    --warning-background: #fde9c5;
+    --disabled-color: #b8b8b8;
+    /* Box-shadow */
+    --box-shadow-style-1: 0px 4px 6px rgba(69, 69, 69, 0.1);
+    --box-shadow-style-2: 0px 4px 10px rgba(69, 69, 69, 0.12);
+    --box-shadow-style-3: 0px 4px 12px rgba(69, 69, 69, 0.2);
+    /* Social brand colors */
+    --glassdoor-brand-color: #008000; /*global variable*/
+    --twitter-brand-color: #1ea0f2; /*global variable*/
+    --facebook-brand-color: #3b5998; /*global variable*/
+    --linkedin-brand-color: #0077b5; /*global variable*/
+    --googleplus-brand-color: #dd4b39; /*global variable*/
+    --instagram-brand-color: #e4405f; /*global variable*/
+    --pinterest-brand-color: #bd081c; /*global variable*/
+    --vk-brand-color: #4a76a8; /*global variable*/
+    --weibo-brand-color: #df2029; /*global variable*/
+    --xing-brand-color: #026466; /*global variable*/
+    --telegram-brand-color: #0088cc; /*global variable*/
+    --whatsapp-brand-color: #25d366; /*global variable*/
+    /* Job tags  */
+    --job-tag-bg-color-style-1: #fef5eb;
+    --job-tag-color-style1: #ffc90a;
+    --job-tag-bg-color-style-2: #fceced;
+    --job-tag-color-style2: #f19b9e;
+    --job-tag-bg-color-style-3: #eefae5;
+    --job-tag-color-style3: #57d300;
+    /* Accessability */
+    --accessibility-outline-color: #000; /*global variable*/
+    --accessibility-outline-width: 2px; /*global variable*/
+    --accessibility-outline-style: solid; /*global variable*/
+    --accessibility-outline-offset: 4px;
+    /* Button */
+    --btn-dark: var(--text-dark);
+    --btn-padding-x: 40px;
+    --btn-padding-y: 0;
+    --btn-font-weight: 600;
+    --btn-line-height: 1.2;
+    --btn-border-width: 1px;
+    --btn-border-color: var(--stroke-dark);
+    --btn-border-radius: 0;
+    --btn-height: 48px;
+    --btn-height-lg: 64px;
+    --btn-height-sm: 40px;
+    --btn-bg: transparent;
+    --btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+    --btn-disabled-color: var(--disabled-color);
+    --btn-disabled-opacity: 0.65;
+    --btn-hover-decoration: none;
+    --btn-active-decoration: none;
+    --btn-font-size-1: var(--paragraph-font-size-2);
+    --btn-line-height-1: 1.2;
+    --btn-focus-bg: transparent;
+    --btn-focus-border-color: var(--brand-color-primary);
+    --btn-outline-color: var(--accessibility-outline-color);
+    --btn-outline-width: var(--accessibility-outline-width);
+    --btn-outline-style: var(--accessibility-outline-style);
+    --btn-focus-color: var(--brand-color-primary);
+    --btn-hover-bg: transparent;
+    --btn-hover-border-color: transparent;
+    --btn-active-color: var(--brand-color-primary);
+    --btn-active-bg: transparent;
+    --btn-active-border-color: var(--brand-color-primary);
+    /* Form elements */
+    /* Input*/
+    --input-bg: var(--white);
+    --input-disabled-bg: var(--disabled-color);
+    --input-disabled-stroke: var(--disabled-color);
+    --input-stroke: #b8b8b8;
+    --input-stroke-focus: #0083ac;
+    --input-stroke-error: var(--alert-error);
+    --input-text-color: #5f6871;
+    --input-place-holder-color: var(--placeholder-text-color-1);
+    --input-box-shadow: 0 6px 20px 5px rgba(52, 58, 64, 0.04);
+    --input-box-shadow-focus: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+    --form-checkbox-stroke: #757575;
+    --input-checkbox-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxNCAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAuMzMyMDMxIDUuNzU3Mkw1LjA5Mzk0IDEwLjU1NTdMMTMuNjY1NCAxLjkxODQzTDEyLjMyMjUgMC41NTU2NjRMNS4wOTM5NCA3LjgzOTczTDEuNjc0ODkgNC40MDQwM0wwLjMzMjAzMSA1Ljc1NzJaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K');
+    --input-radio-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgY2xhc3M9InBody1yYWRpby1jaGVja2VkIj4KPHJlY3QgeD0iMi41IiB5PSIyLjUiIHdpZHRoPSIxOSIgaGVpZ2h0PSIxOSIgcng9IjkuNSIgZmlsbD0id2hpdGUiIHN0cm9rZT0iaW5oZXJpdCIvPgo8cmVjdCB4PSI1IiB5PSI1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHJ4PSI3IiBzdHJva2U9Im5vbmUiLz4KPC9zdmc+');
+    --input-height: 48px;
+    --input-font-weight: 400;
+    --input-font-family: var(--body-font-family);
+    --input-font-size: var(--paragraph-font-size-2); /*global variable*/
+    --input-line-height: 1.2; /*global variable*/
+    --input-border-width: 1px;
+    --input-border-radius: 0px;
+    --input-v-padding: 16px; /*global variable*/
+    --input-h-padding: 16px; /*global variable*/
+    --input-appearance: none;
+    --input-label-font-size: var(--phw-g-input-label-text-font-size); /*global variable*/
+    --input-label-line-height: 1.2;
+    /* Input small */
+    --input-height-sm: 40px; /*global variable*/
+    --input-v-padding-sm: 8px; /*global variable*/
+    --input-font-size-sm: var(--phw-g-small-text-font-size); /*global variable*/
+    --input-line-height-sm: 1.5; /*global variable*/
+    /* Input large */
+    --input-height-lg: 64px; /*global variable*/
+    --input-v-padding-lg: 32px; /*global variable*/
+    --input-font-size-lg: var(--paragraph-font-size-2); /*global variable*/
+    --input-line-height-lg: 1.4; /*global variable*/
+    /* Checkbox and radio */
+    --form-checkbox-width: 24px;
+    --form-checkbox-space: 12px;
+    --form-checkbox-height: 24px;
+    --form-checkbox-border-radius: var(--input-border-radius);
+    /* Animations */
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+    --animate-repeat: 1;
+}
+@media only screen and (max-width: 1919.98px) {
+    :root {
+        /* Container */
+        --grid-container: 88.545%;
+        --grid-gutter-space: calc(var(--mu-space) * 4);
+        --container-top-space: 100px;
+        --container-bottom-space: 100px;
+        --widget-header-content-block-between-space: calc(var(--pu-space) * 6);
+        --widget-content-footer-block-between-space: calc(var(--pu-space) * 6);
+        /* Font Size and line height */
+        /* button text font size */
+        --btn-font-size-1: var(--phw-g-small-text-font-size);
+        --btn-padding-x: 32px;
+        --btn-padding-y: 0;
+        --input-height: 51px;
+        /*input small*/
+        --input-height-sm: 40px;
+        --input-v-padding-sm: 8px;
+        --input-font-size-sm: var(--phw-g-small-text-font-size);
+        --input-line-height-sm: 1.5;
+        /*input large*/
+        --input-height-lg: 64px;
+        --input-v-padding-lg: 32px;
+        --input-font-size-lg: var(--phw-g-regular-text-font-size);
+        --input-line-height-lg: 1.4;
+        /* footer menu heading style  */
+        --footer-menu-list-font-size: var(--phw-g-input-label-text-font-size);
+        --footer-menu-list-line-height: 1.5;
+        /*footer menu style 1 for address and sub menu items */
+        --footer-menu-list-font-size-style-1: var(--phw-g-small-text-font-size);
+        --footer-menu-list-line-height-style-1: 1;
+        --number-heading-font-size: var(--phw-g-widget-title-huge-font-size);
+        --number-heading-line-height: 1.25;
+        --modal-width: 824px;
+        --modal-width-sm: 640px;
+        --modal-width-md: 824px;
+        --modal-width-lg: 90%;
+        --video-modal-width: 824px;
+        --video-modal-width-sm: 640px;
+        --video-modal-width-md: 824px;
+        --video-modal-width-lg: 90%;
+    }
+}
+/* 768 - 1199.98 */
+@media only screen and (max-width: 1199.98px) {
+    :root {
+        /* Container */
+        --grid-container: calc(100% - 88px);
+        --grid-gutter-space: calc(var(--mu-space) * 3);
+        --container-top-space: 64px;
+        --container-bottom-space: 64px;
+        --widget-header-content-block-between-space: calc(var(--pu-space) * 6);
+        --widget-content-footer-block-between-space: calc(var(--pu-space) * 6);
+        /*input*/
+        --input-height: 42px;
+        --input-font-size: var(--phw-g-small-text-font-size);
+        --input-line-height: 1.25;
+        --input-label-font-size: var(--phw-g-small-text-font-size);
+        --input-label-line-height: 1.25;
+        /*input small*/
+        --input-height-sm: 32px;
+        --input-font-size-sm: var(--font-size-15);
+        --input-line-height-sm: 1.42;
+        /*input large*/
+        --input-height-lg: 58px;
+        --input-font-size-lg: var(--phw-g-input-label-text-font-size);
+        --input-line-height-lg: 1.4;
+        --modal-width: 736px;
+        --modal-width-sm: 600px;
+        --modal-width-md: 736px;
+        --modal-width-lg: 736px;
+        --video-modal-width: 736px;
+        --video-modal-width-sm: 600px;
+        --video-modal-width-md: 736px;
+        --video-modal-width-lg: 736px;
+    }
+}
+/* 320 - 767 */
+@media only screen and (max-width: 767.98px) {
+    :root {
+        /* Container */
+        --grid-container: calc(100% - 32px);
+        --grid-gutter-space: calc(var(--mu-space) * 2);
+        --container-top-space: 40px;
+        --container-bottom-space: 40px;
+        --widget-header-content-block-between-space: calc(var(--pu-space) * 4);
+        --widget-content-footer-block-between-space: calc(var(--pu-space) * 4);
+        /*line height */
+        --line-height-5: 1.25;
+        --line-height-6: 1.6;
+        --modal-width: 96%;
+        --modal-width-sm: 96%;
+        --modal-width-md: 96%;
+        --modal-width-lg: 96%;
+        --video-modal-width: 96%;
+        --video-modal-width-sm: 96%;
+        --video-modal-width-md: 96%;
+        --video-modal-width-lg: 96%
+    }
+}
+Spaces: 
+Margin
+
+
+Margin large screen
+
+
+
+
+Margins for desktop, medium and small screens 
+ phw-m-xl-0 class names format below 1920px 
+
+phw-m-md-0 class names format below 1279px
+
+phw-m-sm-0 class names format below 1024px
+
+phw-m-xs-0 class names format below 768px
+
+Padding
+
+
+Padding large screen
+
+
+
+
+Padding for desktop, medium and small screens 
+ phw-p-xl-0 class names format below 1920px 
+
+phw-p-lg-0 class names format below 1279px
+
+phw-p-md-0 class names format below 1024px
+
+phw-p-sm-0 class names format below 768px
+
+
+Icons
+
+
+.phw-i-sz-1 {
+    width: calc(var(--su-space));
+    height: calc(var(--su-space));
+}
+.phw-i-sz-1-5 {
+    width: calc(var(--su-space) * 1.5);
+    height: calc(var(--su-space) * 1.5);
+}
+.phw-i-sz-2 {
+    width: calc(var(--su-space) * 2);
+    height: calc(var(--su-space) * 2);
+}
+.phw-i-sz-2-5 {
+    width: calc(var(--su-space) * 2.5);
+    height: calc(var(--su-space) * 2.5);
+}
+.phw-i-sz-3 {
+    width: calc(var(--su-space) * 3);
+    height: calc(var(--su-space) * 3);
+}
+.phw-i-sz-4 {
+    width: calc(var(--su-space) * 4);
+    height: calc(var(--su-space) * 4);
+}
+.phw-i-sz-6 {
+    width: calc(var(--su-space) * 6);
+    height: calc(var(--su-space) * 6);
+}
+.phw-i-sz-8 {
+    width: calc(var(--su-space) * 8);
+    height: calc(var(--su-space) * 8);
+}
+.phw-i-sz-10 {
+    width: calc(var(--su-space) * 10);
+    height: calc(var(--su-space) * 10);
+}
+.phw-i-sz-16 {
+    width: calc(var(--su-space) * 16);
+    height: calc(var(--su-space) * 16);
+}
+@media (max-width: @screen-xl-max) {
+    .phw-i-sz-xl-1 {
+        width: calc(var(--su-space));
+        height: calc(var(--su-space));
+    }
+    .phw-i-sz-xl-1-5 {
+        width: calc(var(--su-space) * 1.5);
+        height: calc(var(--su-space) * 1.5);
+    }
+    .phw-i-sz-xl-2 {
+        width: calc(var(--su-space) * 2);
+        height: calc(var(--su-space) * 2);
+    }
+    .phw-i-sz-xl-2-5 {
+        width: calc(var(--su-space) * 2.5);
+        height: calc(var(--su-space) * 2.5);
+    }
+    .phw-i-sz-xl-3 {
+        width: calc(var(--su-space) * 3);
+        height: calc(var(--su-space) * 3);
+    }
+    .phw-i-sz-xl-4 {
+        width: calc(var(--su-space) * 4);
+        height: calc(var(--su-space) * 4);
+    }
+    .phw-i-sz-xl-6 {
+        width: calc(var(--su-space) * 6);
+        height: calc(var(--su-space) * 6);
+    }
+    .phw-i-sz-xl-8 {
+        width: calc(var(--su-space) * 8);
+        height: calc(var(--su-space) * 8);
+    }
+    .phw-i-sz-xl-10 {
+        width: calc(var(--su-space) * 10);
+        height: calc(var(--su-space) * 10);
+    }
+    .phw-i-sz-xl-16 {
+        width: calc(var(--su-space) * 16);
+        height: calc(var(--su-space) * 16);
+    }
+}
+@media (max-width: @screen-lg-max) {
+    .phw-i-sz-lg-1 {
+        width: calc(var(--su-space));
+        height: calc(var(--su-space));
+    }
+    .phw-i-sz-lg-1-5 {
+        width: calc(var(--su-space) * 1.5);
+        height: calc(var(--su-space) * 1.5);
+    }
+    .phw-i-sz-lg-2 {
+        width: calc(var(--su-space) * 2);
+        height: calc(var(--su-space) * 2);
+    }
+    .phw-i-sz-lg-2-5 {
+        width: calc(var(--su-space) * 2.5);
+        height: calc(var(--su-space) * 2.5);
+    }
+    .phw-i-sz-lg-3 {
+        width: calc(var(--su-space) * 3);
+        height: calc(var(--su-space) * 3);
+    }
+    .phw-i-sz-lg-4 {
+        width: calc(var(--su-space) * 4);
+        height: calc(var(--su-space) * 4);
+    }
+    .phw-i-sz-lg-5 {
+        width: calc(var(--su-space) * 5);
+        height: calc(var(--su-space) * 5);
+    }
+    .phw-i-sz-lg-6 {
+        width: calc(var(--su-space) * 6);
+        height: calc(var(--su-space) * 6);
+    }
+    .phw-i-sz-lg-7 {
+        width: calc(var(--su-space) * 7);
+        height: calc(var(--su-space) * 7);
+    }
+    .phw-i-sz-lg-8 {
+        width: calc(var(--su-space) * 8);
+        height: calc(var(--su-space) * 8);
+    }
+    .phw-i-sz-lg-9 {
+        width: calc(var(--su-space) * 9);
+        height: calc(var(--su-space) * 9);
+    }
+    .phw-i-sz-lg-10 {
+        width: calc(var(--su-space) * 10);
+        height: calc(var(--su-space) * 10);
+    }
+    .phw-i-sz-lg-16 {
+        width: calc(var(--su-space) * 16);
+        height: calc(var(--su-space) * 16);
+    }
+}
+@media (max-width: @screen-md-max) {
+    .phw-i-sz-md-1 {
+        width: calc(var(--su-space));
+        height: calc(var(--su-space));
+    }
+    .phw-i-sz-md-1-5 {
+        width: calc(var(--su-space) * 1.5);
+        height: calc(var(--su-space) * 1.5);
+    }
+    .phw-i-sz-md-2 {
+        width: calc(var(--su-space) * 2);
+        height: calc(var(--su-space) * 2);
+    }
+    .phw-i-sz-md-2-5 {
+        width: calc(var(--su-space) * 2.5);
+        height: calc(var(--su-space) * 2.5);
+    }
+    .phw-i-sz-md-3 {
+        width: calc(var(--su-space) * 3);
+        height: calc(var(--su-space) * 3);
+    }
+    .phw-i-sz-md-4 {
+        width: calc(var(--su-space) * 4);
+        height: calc(var(--su-space) * 4);
+    }
+    .phw-i-sz-md-5 {
+        width: calc(var(--su-space) * 5);
+        height: calc(var(--su-space) * 5);
+    }
+    .phw-i-sz-md-6 {
+        width: calc(var(--su-space) * 6);
+        height: calc(var(--su-space) * 6);
+    }
+    .phw-i-sz-md-7 {
+        width: calc(var(--su-space) * 7);
+        height: calc(var(--su-space) * 7);
+    }
+    .phw-i-sz-md-8 {
+        width: calc(var(--su-space) * 8);
+        height: calc(var(--su-space) * 8);
+    }
+    .phw-i-sz-md-9 {
+        width: calc(var(--su-space) * 9);
+        height: calc(var(--su-space) * 9);
+    }
+    .phw-i-sz-md-10 {
+        width: calc(var(--su-space) * 10);
+        height: calc(var(--su-space) * 10);
+    }
+    .phw-i-sz-md-16 {
+        width: calc(var(--su-space) * 16);
+        height: calc(var(--su-space) * 16);
+    }
+}
+@media (max-width: @screen-sm-max) {
+    .phw-i-sz-sm-1 {
+        width: calc(var(--su-space));
+        height: calc(var(--su-space));
+    }
+    .phw-i-sz-sm-1-5 {
+        width: calc(var(--su-space) * 1.5);
+        height: calc(var(--su-space) * 1.5);
+    }
+    .phw-i-sz-sm-2 {
+        width: calc(var(--su-space) * 2);
+        height: calc(var(--su-space) * 2);
+    }
+    .phw-i-sz-sm-2-5 {
+        width: calc(var(--su-space) * 2.5);
+        height: calc(var(--su-space) * 2.5);
+    }
+    .phw-i-sz-sm-3 {
+        width: calc(var(--su-space) * 3);
+        height: calc(var(--su-space) * 3);
+    }
+    .phw-i-sz-sm-4 {
+        width: calc(var(--su-space) * 4);
+        height: calc(var(--su-space) * 4);
+    }
+    .phw-i-sz-sm-5 {
+        width: calc(var(--su-space) * 5);
+        height: calc(var(--su-space) * 5);
+    }
+    .phw-i-sz-sm-6 {
+        width: calc(var(--su-space) * 6);
+        height: calc(var(--su-space) * 6);
+    }
+    .phw-i-sz-sm-7 {
+        width: calc(var(--su-space) * 7);
+        height: calc(var(--su-space) * 7);
+    }
+    .phw-i-sz-sm-8 {
+        width: calc(var(--su-space) * 8);
+        height: calc(var(--su-space) * 8);
+    }
+    .phw-i-sz-sm-9 {
+        width: calc(var(--su-space) * 9);
+        height: calc(var(--su-space) * 9);
+    }
+    .phw-i-sz-sm-10 {
+        width: calc(var(--su-space) * 10);
+        height: calc(var(--su-space) * 10);
+    }
+    .phw-i-sz-sm-16 {
+        width: calc(var(--su-space) * 16);
+        height: calc(var(--su-space) * 16);
+    }
+}
+ 
+
+ 
+
+Icons sizes for desktop, medium and small screens 
+ phw-i-sz-xl- class names format below 1920px 
+
+phw-i-sz-lg- class names format below 1279px
+
+phw-i-sz-md- class names format below 1024px
+
+phw-i-sz-sm- class names format below 768px
+
+Layouts
+Available breakpoints
+Phenom includes six default breakpoints.
+
+Breakpoint
+
+Class infix
+
+Dimensions
+
+Extra small
+
+xs
+
+<576px
+
+Small
+
+sm
+
+≥576px
+
+Medium
+
+md
+
+≥768px
+
+Large
+
+lg
+
+≥1024px
+
+Extra large
+
+xl
+
+≥1280px
+
+Extra extra large
+
+xxl
+
+≥1920px
+
+ 
+
+How to use the the media queries check the below code example
+
+
+
+@media (min-width: 576px) {
+  /*small screen / phone*/
+}
+@media (min-width: 768px) {
+  /*Small screen / tablet*/
+}
+@media (min-width: 1025px) {
+  /*Medium screen / desktop*/
+}
+@media (min-width: 1280px) {
+  /*Large screen / desktop */
+}
+@media (min-width: 1920px) {
+  /* wide desktop / desktop*/
+}
+/*So media queries don't overlap when required, provide a maximum*/
+@media (max-width: 1919.98px) {
+  /*Large screen / desktop */
+}
+@media (max-width: 1279.98px) {
+/*Medium screen / desktop*/
+}
+@media (max-width: 1024.98px) {
+  /*Small screen / tablet*/
+}
+@media (max-width: 767.98px) {
+  /*small screen / phone*/
+}
+@media (max-width: 575.98px) {
+  /*Extra small screen / phone*/
+}
+Containers
+Containers are a fundamental building block of phenom that contain, pad, and align your content within a given device or viewport.
+
+How they work
+Containers are the most basic layout element in phenom and are required when using our default grid system. Containers are used to contain, While containers can be nested, most layouts do not require a nested container.
+
+Phenom comes with three different containers:
+
+.phw-container, which sets a max-width at each responsive breakpoint
+
+if we use .phw-container,  inside .phw-container,  it will sets a width:100% at each responsive breakpoint.
+
+.phw-container, will come by default top and bottom space as per global configuration.
+
+The table below illustrates how each container’s width/max-width compares to the original .phw-container across each breakpoint.
+
+ 
+
+ 
+
+Extra small<576px
+
+Small≥576px
+
+Medium≥768px
+
+Large≥1025px
+
+X-Large≥1280px
+
+XX-Large≥1920px
+
+.phw-container
+
+(100%-32px)
+
+(100%-32px)
+
+(100%-88px)
+
+(100%-88px)
+
+88.545% / 1688px
+
+88.545% / 1688px
+
+ 
+
+Few examples for container how to use 
+
+
+
+<div class="phw-container"></div>
+CSS Grid
+How it works
+We’ve added the option to enable a grid system that’s built on CSS Grid.
+
+Columns and gutter sizes are set via CSS variables. Set these on the parent .phw-grid 
+
+Key differences
+Compared to the default grid system:
+
+Gaps replaces gutters. The gap property replaces the horizontal padding from our default grid system and functions more like margin.
+
+As such, unlike .phw-grid have no negative margins and margin utilities cannot be used to change the grid gutters. Grid gaps are applied horizontally and vertically by default. 
+
+Inline and custom styles should be viewed as replacements for modifier classes (e.g., style="--grid-columns: 3;" ).
+
+Nesting works similarly.
+
+ 
+
+Three columns
+Three equal-width columns across all viewports and devices can be created by using the .g-col-4 classes. 
+
+
+
+<div class="phw-grid">
+  <div class="g-col-4">.g-col-4</div>
+  <div class="g-col-4">.g-col-4</div>
+  <div class="g-col-4">.g-col-4</div>
+</div>
+Responsive
+Use responsive classes to adjust your layout across viewports. Here we start with two columns on the narrowest viewports, and then grow to three columns on medium viewports and above.
+
+
+
+<div class="phw-grid">
+  <div class="g-col-6 g-col-md-4">.g-col-6 .g-col-md-4</div>
+  <div class="g-col-6 g-col-md-4">.g-col-6 .g-col-md-4</div>
+  <div class="g-col-6 g-col-md-4">.g-col-6 .g-col-md-4</div>
+</div>
+Compare that to this two column layout at all viewports.
+
+
+
+<div class="grid">
+  <div class="g-col-6">.g-col-6</div>
+  <div class="g-col-6">.g-col-6</div>
+</div>
+Nesting
+Similar to our default grid system, our CSS Grid allows for easy nesting of .phw-grid. However, unlike the default, this grid inherits changes in the rows, columns, and gaps. Consider the example below:
+
+We override the default number of columns with a local CSS variable: --grid-columns: 3.
+
+In the first auto-column, the column count is inherited and each column is one-third of the available width.
+
+In the second auto-column, we’ve reset the column count on the nested .phw-grid to 12 (our default).
+
+The third auto-column has no nested content.
+
+In practice this allows for more complex and custom layouts when compared to our default grid system.
+
+
+
+<div class="phw-grid" style="--grid-columns: 3;">
+  <div>
+    First auto-column
+    <div class="phw-grid">
+      <div>Auto-column</div>
+      <div>Auto-column</div>
+    </div>
+  </div>
+  <div>
+    Second auto-column
+    <div class="phw-grid" style="--grid-columns: 12;">
+      <div class="g-col-6">6 of 12</div>
+      <div class="g-col-4">4 of 12</div>
+      <div class="g-col-2">2 of 12</div>
+    </div>
+  </div>
+  <div>Third auto-column</div>
+</div>
+Columns and gaps
+Adjust the number of columns and the gap.
+
+
+
+<div class="phw-grid phw-grid-4 phw-grid-lg-5">
+  <div class="g-col-2">.g-col-2</div>
+  <div class="g-col-2">.g-col-2</div>
+</div>
+ 
+
+
+
+<div class="phw-grid phw-grid-4" style="--grid-columns: 4; --grid-gutter-space: 5rem;">
+  <div class="g-col-2">.g-col-2</div>
+  <div class="g-col-2">.g-col-2</div>
+</div>
+Gaps
+Change the gaps only by adding  classes 
+
+phw-gap-0 - --mu-space*0
+
+phw-gap-025 - --grid-gutter-space*.25
+
+phw-gap-050 - --grid-gutter-space*.50
+
+phw-gap-1 - --grid-gutter-space*1
+
+phw-gap-2 - --grid-gutter-space*2
+
+phw-gap-3 - --grid-gutter-space*3
+
+phw-gap-4 - --grid-gutter-space*4
+
+phw-gap-5 - --grid-gutter-space*5
+
+
+
+<div class="phw-grid phw-gap-0">
+  <div class="g-col-6">.g-col-6</div>
+  <div class="g-col-6">.g-col-6</div>
+  <div class="g-col-6">.g-col-6</div>
+  <div class="g-col-6">.g-col-6</div>
+</div>
+ 
+
+Spacing
+Phenom includes a wide range of shorthand responsive margin and padding utility classes to modify an element’s appearance.
+
+Margin and padding
+Assign responsive-friendly margin or padding values to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. Classes are built from  8px * .25 to 8px * 4.
+
+Notation
+Spacing utilities that apply to all breakpoints, from xs to xxl, have no breakpoint abbreviation in them. This is because those classes are applied from min-width: 0 and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
+
+The classes are named using the format {prefix}-{property}{sides}-{size} for xs and {property}{sides}-{breakpoint}-{size} for sm, md, lg, xl, and xxl.
+
+Where property is one of:
+
+m - for classes that set margin
+
+p - for classes that set padding
+
+Where sides is one of:
+
+t - for classes that set margin-top or padding-top
+
+b - for classes that set margin-bottom or padding-bottom
+
+l - for classes that set margin-left or padding-left
+
+r - for classes that set margin-right or padding-right
+
+blank - for classes that set a margin or padding on all 4 sides of the element
+
+Where size is one of:
+
+0 - for classes that eliminate the margin or padding by setting it to 0
+
+025 - (by default) for classes that set the margin or padding to --space * .25
+
+050 - (by default) for classes that set the margin or padding to --space * .50
+
+1 - (by default) for classes that set the margin or padding to --space * 1
+
+2 - (by default) for classes that set the margin or padding to --space * 2
+
+3 - (by default) for classes that set the margin or padding to --space * 3 
+
+4 - (by default) for classes that set the margin or padding to --space * 4
+
+5 - (by default) for classes that set the margin or padding to --space * 5
+
+6 - (by default) for classes that set the margin or padding to --space * 6
+
+auto - for classes that set the margin to auto
+
+ 
+
+
+
+<div class="phw-m-0">.phw-m-0</div>
+<div class="phw-m-xs-0">.phw-m-xs-0</div>
+<div class="phw-m-sm-0">.phw-m-sm-0</div>
+<div class="phw-m-md-0">.phw-m-md-0</div>
+<div class="phw-m-lg-0">.phw-m-lg-0</div>
+<div class="phw-m-xl-0">.phw-m-xl-0</div>
+<div class="phw-mt-1">.phw-mt-1</div>
+<div class="phw-mb-1">.phw-mb-1</div>
+<div class="phw-ml-1">.phw-ml-1</div>
+<div class="phw-mr-1">.phw-mr-1</div>
+<div class="phw-mt-auto">.phw-mt-auto</div>
+<div class="phw-mb-auto">.phw-mb-auto</div>
+<div class="phw-ml-auto">.phw-ml-auto</div>
+<div class="phw-mr-auto">.phw-mr-auto</div>
+<div class="phw-p-0">.phw-p-0</div>
+<div class="phw-p-xs-0">.phw-p-xs-0</div>
+<div class="phw-p-sm-0">.phw-p-sm-0</div>
+<div class="phw-p-md-0">.phw-p-md-0</div>
+<div class="phw-p-lg-0">.phw-p-lg-0</div>
+<div class="phw-p-xl-0">.phw-p-xl-0</div>
+<div class="phw-pt-1">.phw-pt-1</div>
+<div class="phw-pb-1">.phw-pb-1</div>
+<div class="phw-pl-1">.phw-pl-1</div>
+<div class="phw-pr-1">.phw-pr-1</div>
+ 
+
+Form Control
+Check box 
+phw-form-checkclass has to use for label and inside input with class“phw-input and span with class “phw-check-label“ has to wrap as mentioned below. 
+
+
+
+<label for="checkbox1" class="phw-form-label">
+  <input type="checkbox" class="phw-input" id="checkbox1">
+  <span class="phw-check-label">check box</span>
+</label>
+ 
+
+Radio
+
+phw-form-label class has to use for label and inside input with class“phw-input and span with class “phw-check-label“ has to wrap as mentioned below. 
+
+
+
+<label for="radio" class="phw-form-label">
+  <input type="checkbox" class="phw-input" id="radio">
+  <span class="phw-check-label">check box</span>
+</label>
+ 
+
+Input
+
+phw-g-text-field-style-1 - input should have this class to get input styles from platform.
+
+
+
+<input class="phw-g-text-field-style-1" type="text" >
+input with icon padding
+
+phw-g-text-field-style-1 phw-icon-left using this classes you will get padding left input inside .
+
+phw-g-text-field-style-1 phw-icon-right using this classes you will get padding right input inside.
+
+
+
+<input type="text" class="phw-g-text-field-style-1 phw-input-icon-pl" aria-label="phw-icon-left">
+<input type="text" class="phw-g-text-field-style-1 phw-input-icon-pr" aria-label="phw-icon-right">
+<input type="text" class="phw-g-text-field-style-1 phw-input-icon-pr" aria-label="phw-icon-right">
+input with icon position(left)
+
+
+
+<div class="phw-form-group">
+  <div class="phw-input-group">
+    <svg :class="$style['icon']" fill="currentcolor" class="phw-input-icon-left">
+      <use href="#search"></use>
+    </svg>
+    <input type="text" class="phw-g-text-field-style-1 phw-input-icon-pl" aria-label="phw-icon-left">
+  </div>
+</div>
+input with icon position(right)
+
+
+
+<div class="phw-form-group">
+  <div class="phw-input-group">
+    <input type="text" class="phw-g-text-field-style-1 phw-input-icon-pr" aria-label="phw-icon-right">
+    <svg :class="$style['icon']" fill="currentcolor" class="phw-input-icon-right">
+        <use :href="`${iconsPath}#search`"></use>
+    </svg>
+  </div>
+</div>
+input with icon position(left & right)
+
+
+
+<div class="phw-form-group">
+    <div class="phw-input-group">
+      <svg :class="$style['icon']" fill="currentcolor" class="phw-input-icon-left">
+            <use href="#search"></use>
+        </svg>
+        <input type="text" class="phw-g-text-field-style-1 phw-icon-left phw-input-icon-pr phw-input-icon-pl" />
+        <svg :class="$style['icon']" fill="currentcolor" class="phw-input-icon-right">
+            <use href="#search"></use>
+        </svg>
+    </div>
+</div>
+Input group with button
+
+
+
+<div class="phw-form-group phw-input-group-btn">
+    <div class="phw-input-group">
+        <input type="text" class="phw-g-text-field-style-1 phw-input-icon-pr" />
+        <svg :class="$style['icon']" fill="currentcolor" class="phw-input-icon-right">
+            <use href="#search"></use>
+        </svg>
+    </div>      
+    <div class="phw-input-action-btn">
+        <button class="phw-btn phw-btn-primary phw-input-btn">Search</button>
+    </div>
+</div>
+ 
+
+Input Sizing
+Set heights using classes like .phw-f-c-sm and .phw-f-c-lg to the form-group as below.
+
+
+
+<div class="phw-form-group phw-f-c-lg">
+    <label>Input Large</label>
+    <input type="text" class="phw-g-text-field-style-1" />
+</div>
+<div class="phw-form-group phw-f-c-sm">
+    <label>Input Large</label>
+    <input type="text" class="phw-g-text-field-style-1" />
+</div>
+ 
+
+Form Select
+Form Sizing
+
+Set heights using classes like .phw-f-c-sm and .phw-f-c-lg.
+
+
+
+<select class="phw-g-dropdown-style-1" aria-label="Sort by:">
+<option value="Lorem">Lorem</option>
+<option value="Lorem">Lorem</option>
+</select>
+ 
+
+Buttons
+Use button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
+
+Examples
+Phenom includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.
+
+
+
+<button type="button" class="phw-btn phw-btn-primary">Primary</button>
+<button type="button" class="phw-btn phw-btn-secondary">Secondary</button>
+<button type="button" class="phw-btn phw-btn-plain">Plain</button>
+<button type="button" class="phw-btn phw-btn-default">Default</button>
+<button type="button" class="phw-btn phw-btn-link">Btn Link</button>
+<button type="button" class="phw-btn phw-link">Link</button>
+Button Sizes
+Fancy larger or smaller buttons? Add .phw-btn-lg or .phw-btn-sm for additional sizes.
+
+Large button
+
+
+<button type="button" class="phw-btn phw-btn-primary phw-btn-lg">Large button</button>
+<button type="button" class="phw-btn phw-btn-secondary phw-btn-lg">Large button</button>
+Small button
+
+
+<button type="button" class="phw-btn phw-btn-primary phw-btn-sm">Small button</button>
+<button type="button" class="phw-btn phw-btn-secondary phw-btn-sm">Small button</button>
+ 
+
+Hiding elements
+For faster mobile-friendly development, use responsive display classes for showing and hiding elements by device. Avoid creating entirely different versions of the same site, instead hide elements responsively for each screen size.
+
+To hide elements simply use the .phw-d-none class or one of the .phw-d-{sm,md,lg,xl,xxl}-none classes for any responsive screen variation.
+
+To show an element only on a given interval of screen sizes you can combine one .phw-d-*-none class with a .d-*-* class, for example .phw-d-none .phw-d-md-block .phw-d-xl-none .phw-d-xxl-none will hide the element for all screen sizes except on medium and large devices.
+
+Screen size
+
+Class
+
+Hidden on all
+
+.phw-d-none
+
+Hidden only on xs
+
+.phw-d-none .phw-d-sm-block
+
+Hidden only on sm
+
+.phw-d-sm-none .phw-d-md-block
+
+Hidden only on md
+
+.phw-d-md-none .phw-d-lg-block
+
+Hidden only on lg
+
+.phw-d-lg-none .phw-d-xl-block
+
+Hidden only on xl
+
+.phw-d-xl-none
+
+Hidden only on xxl
+
+.phw-d-xxl-none .phw-d-xxl-block
+
+Visible on all
+
+.phw-d-block
+
+Visible only on xs
+
+.phw-d-block .phw-d-sm-none
+
+Visible only on sm
+
+.phw-d-none .phw-d-sm-block .phw-d-md-none
+
+Visible only on md
+
+.phw-d-none .phw-d-md-block .phw-d-lg-none
+
+Visible only on lg
+
+.phw-d-none .phw-d-lg-block .phw-d-xl-none
+
+Visible only on xl
+
+.phw-d-none .phw-d-xl-block .phw-d-xxl-none
+
+Visible only on xxl
+
+.phw-d-none .phw-d-xxl-block
+
+ 
+
+
+
+<div class="phw-d-lg-none">hide on lg and wider screens</div>
+<div class="phw--d-none phw-d-lg-block">hide on screens smaller than lg</div>
+ 
+
+Flex
+Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with flexbox utilities. For more complex implementations, custom CSS may be necessary.
+
+Flex Display
+
+
+<div class="phw-d-flex">Display Flex</div>
+<div class="phw-d-inline-flex">Display Inline flex</div>
+Flex Direction
+
+
+<div class="phw-d-flex phw-flex-row">Display as flex and direction as row</div>
+<div class="phw-d-flex phw-flex-row-reverse">Display as flex and direction as row reverse</div>
+<div class="phw-d-flex phw-flex-column">Display as flex and direction as column</div>
+<div class="phw-d-flex phw-flex-column-reverse">Display as flex and direction as column reverse</div>
+ 
+
+Flex Grow
+
+
+<div class="phw-flex-grow">Flex Grow</div>
+ 
+
+Flex Wrap
+
+
+<div class="phw-flex-wrap">Flex Wrap</div>
+<div class="phw-flex-nowrap">Flex no Wrap</div>
+ 
+
+Justify Content
+Justify Content
+
+Class
+
+Jstify content start
+
+.phw-justify-content-start
+
+Jstify content end
+
+.phw-justify-content-end
+
+Jstify content center
+
+.phw-justify-content-center
+
+Jstify content between
+
+.phw-justify-content-between
+
+Jstify content around
+
+.phw-justify-content-around
+
+Jstify content evenly
+
+.phw-justify-content-evenly
+
+ 
+
+Align items
+Align items
+
+Class
+
+Align items start
+
+.phw-align-items-start
+
+Align items end
+
+.phw-align-items-end
+
+Align items center
+
+.phw-align-items-center
+
+Align items baseline
+
+.phw-align-items-baseline
+
+Align items stretch
+
+.phw-align-items-stretch
+
+ 
+
+Align self
+Align self
+
+Class
+
+Align self start
+
+.phw-align-self-start
+
+Align self end
+
+.phw-align-self-end
+
+Align self center
+
+.phw-align-self-center
+
+Align self baseline
+
+.phw-align-self-baseline
+
+Align self stretch
+
+.phw-align-self-stretch
+
+ 
+
+Spinner
+Use the border spinners for a lightweight loading indicator.
+
+
+
+<div class="phw-spinner-block">
+    <div v-if="showLoader" v-phw-setting="" class="phw-spinner-border phw-primary" role="status">
+        <span class="phw-visually-hidden">Search results list Loading...</span>
+    </div>
+</div>
+<div class="phw-spinner-block">
+    <div class="phw-spinner-border phw-secondary" role="status">
+      <span class="phw-visually-hidden">Loading...</span>
+    </div>
+</div>
+ 
+
+
+Text alignment
+Easily realign text to components with text alignment classes. For left, right, and center alignment, responsive classes are available that use the same viewport width breakpoints as the grid system.
+
+
+
+<p class="phw-text-l">Left aligned text on all viewport sizes.</p>
+<p class="phw-text-c">Center aligned text on all viewport sizes.</p>
+<p class="phw-text-r">Right aligned text on all viewport sizes.</p>
+<p class="phw-text-j">Justifyaligned text on all viewport sizes.</p>
+<p class="phw-text-xs-l">Left aligned text on viewports sized XS (extra-small) or wider.</p>
+<p class="phw-text-sm-l">Left aligned text on viewports sized SM (small) or wider.</p>
+<p class="phw-text-md-l">Left aligned text on viewports sized MD (medium) or wider.</p>
+<p class="phw-text-lg-l">Left aligned text on viewports sized LG (large) or wider.</p>
+<p class="phw-text-xl-l">Left aligned text on viewports sized XL (extra-large) or wider.</p>
+Position
+Fixed top
+Position an element at the top of the viewport, from edge to edge. Be sure you understand the ramifications of fixed position in your project; you may need to add additional CSS.
+
+
+
+<div class="phw-fixed-top">...</div>
+Fixed bottom
+Position an element at the bottom of the viewport, from edge to edge. Be sure you understand the ramifications of fixed position in your project; you may need to add additional CSS.
+
+
+
+<div class="phw-fixed-bottom">...</div>
+Sticky top
+Position an element at the top of the viewport, from edge to edge, but only after you scroll past it.
+
+
+
+<div class="phw-sticky-top">...</div>
+Responsive sticky top
+Responsive variations also exist for .phw-sticky-top utility.
+
+
+
+<div class="phw-sticky-xs-top">Stick to the top on viewports sized XS (extra-small) or wider</div>
+<div class="phw-sticky-sm-top">Stick to the top on viewports sized SM (small) or wider</div>
+<div class="phw-sticky-md-top">Stick to the top on viewports sized MD (medium) or wider</div>
+<div class="phw-sticky-lg-top">Stick to the top on viewports sized LG (large) or wider</div>
+<div class="phw-sticky-xl-top">Stick to the top on viewports sized XL (extra-large) or wider</div>
+Sticky bottom
+Position an element at the bottom of the viewport, from edge to edge, but only after you scroll past it.
+
+
+
+<div class="phw-sticky-bottom">...</div>
+Responsive sticky bottom
+Responsive variations also exist for .phw-sticky-bottom utility.
+
+
+
+<div class="phw-sticky-xs-bottom">Stick to the bottom on viewports sized XS (extra-small) or wider</div>
+<div class="phw-sticky-sm-bottom">Stick to the bottom on viewports sized SM (small) or wider</div>
+<div class="phw-sticky-md-bottom">Stick to the bottom on viewports sized MD (medium) or wider</div>
+<div class="phw-sticky-lg-bottom">Stick to the bottom on viewports sized LG (large) or wider</div>
+<div class="phw-sticky-xl-bottom">Stick to the bottom on viewports sized XL (extra-large) or wider</div>
+ 
+
+Position Relative
+Position an element that is Relative Position: Setting the top, right, bottom, and left properties of an element with position: relative; property will cause it to adjust from its normal position. The other objects or elements will not fill the gap.
+
+
+
+<div class="phw-posn-relative"></div>
+Position Absolute
+Position an element that is absolutely positioned is taken out of the flow; thus, other elements are positioned as if it did not exist. The absolutely positioned element is positioned relative to its nearest positioned ancestor
+
+
+
+<div class="phw-posn-absolute"></div>
+Position Static
+Static positioning is the default. It defines the position of a given box essentially as an unpositioned element – it flows in the normal rendering sequence of the web page.
+
+
+
+<div class="phw-posn-static"></div>
+Position Sticky
+An element with position: sticky; is positioned based on the user's scroll position.
+
+A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed)
+
+Centered elemet
+An element with class .hw-posn-center will make it float in center from top bottom and left right.
+It has a property of left 50% and top 50% with tranform -50% which will make it vertical and horizontal centered.
+
+
+
+<div class="phw-posn-center"></div>
+Responsive positions
+Responsive variations also exist for .phw-posn-absolute, .phw-posn-relative, .phw-posn-static, .phw-posn-sticky utility.
+
+
+
+<div class="phw-posn-xs-absolute">Positions absolute on viewports sized XS (extra-small) or wider>/div>
+<div class="phw-posn-sm-absolute">Position absolute on viewports sized SM (small) or wider</div>
+<div class="phw-posn-md-absolute">Position absolute on viewports sized MD (medium) or wider</div>
+<div class="phw-posn-lg-absolute">Position absolute on viewports sized LG (large) or wider</div>
+<div class="phw-posn-xl-absolute">Positions absolute on viewports sized XL (extra-large) or wider</div>
+ 
+
+Heading classes:
+
+
+H1
+
+
+
+
+phw-g-h1-style-2
+phw-g-h1-style-1
+phw-g-h1-404-text-style-1
+for ex:
+<h1 class="phw-g-h1-style-1">.phw-g-h1-style-1 class for styling h1</h1>
+H2
+
+
+
+
+phw-g-h2-style-1
+phw-g-h2-style-2
+phw-g-h2-style-3
+phw-g-h2-style-4
+phw-g-h2-style-5
+phw-g-h2-style-6
+phw-g-h2-widget-heading-style-1
+for ex:
+<h2 class="phw-g-h2-style-1">.phw-g-h2-style-1 class for styling h2</h2>
+H3
+
+
+phw-g-h3-style-1
+phw-g-h3-style-2
+phw-g-h3-style-3
+phw-g-h3-style-4
+For ex:
+<h3 class="phw-g-h3-style-1">.phw-g-h3-style-1 class for styling h3</h3>
+Paragraph & Text classes:
+P
+
+
+phw-g-p-style-1
+phw-g-p-style-2
+phw-g-p-style-3
+phw-g-p-style-4
+phw-g-p-widget-subheading-style-1
+for ex:
+<p class="phw-g-p-style-1">.phw-g-p-style-1 class for styling p</p>
+Other Text classes 
+- We can use this other than p, heading tags(h1 to h6), like div, span
+
+
+
+phw-g-text-style-h3
+phw-g-text-style-h5
+phw-g-text-style-h5
+phw-g-text-style-h6
+phw-g-text-style-1
+phw-g-text-style-2
+phw-g-text-style-4
+phw-g-text-style-5
+For ex:
+<div class="phw-g-text-style-h3">.phw-g-text-style-h3 class for styling div</div>
+<span class="phw-g-text-style-h3">.phw-g-text-style-h3 class for styling span</span>
+Background colors
+
+
+phw-g-widget-bg-dark-1
+phw-g-widget-bg-gray-1
+phw-g-widget-bg-white
+phw-g-widget-bg-primary
+ 
+
+Tag classes
+
+
+phw-g-tags-bg-gray-1
+Icons
+SVG Sprite: 
+Use the SVG sprite to insert any icon through the <use> element. Use the icon’s filename as the fragment identifier (e.g., linkedin is #linkedin). SVG sprites allow you to reference an external file similar to an <img> element, but with the power of currentColor for easy theming.
+Reafference link for usage: https://css-tricks.com/svg-use-with-external-reference-take-2/ 
+Note: 
+
+There’s an issue with Chrome where <use> doesn’t work across domains.
+
+https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/xlink:href 
+
+Xlink:href is deprecated, instead of xlink:href you should use href as mentioned in below. we need to support earlier browser versions, the deprecated xlink:href attribute can be used as a fallback in addition to the href attribute, e.g..
+
+
+
+<use href="some-id" />
+
+
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#facebook`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#google-plus`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#instagram`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#twitter`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#linkedin`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#youtube`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#sharechat`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#share`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#pinterest`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#briefcase`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#briefcase-fill`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#credit-card`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#id-card`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#hamburger`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#star-fill`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#heart-fill`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#heart`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#talent`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#arrow-left`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#arrow-right`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#arrow-down`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#arrow-up`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#calender`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#calender-1`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#email`"></use>
+      </svg>
+        <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#email-send`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#external`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#checkbox-filled`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#check`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#chevron-down`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#chevron-up`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#chevron-left`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#chevron-right`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#cogwheel`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#compass`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#contact`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#contact-1`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#contact-assign`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#copy-link`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#link`"></use>
+      </svg>
+        <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#crown`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#crown-box`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#developer`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#devops`"></use>
+      </svg>
+        <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#show`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#filter`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#filter-1`"></use>
+      </svg>
+        <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#close`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#gallery`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#image`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#education`"></use>
+      </svg>
+        <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#job-search`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#location-fill`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#location`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#minus-square`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#minus-circle`"></use>
+      </svg>
+        <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#minus`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#notification-empty`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#notification-unread`"></use>
+      </svg>
+        <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#people`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#phone`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#phone-stroke`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#php`"></use>
+      </svg>
+        <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#play`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#play-circle`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#plus`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#plus-square`"></use>
+      </svg> 
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#plus-circle`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#delete`"></use>
+      </svg>
+        <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#python`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#quote-right`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#search`"></use>
+      </svg>
+        <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#send`"></use>
+      </svg><svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#align-left`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#shield`"></use>
+      </svg>
+        <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#user`"></use>
+      </svg> 
+        <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#user-circle`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#alert`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#error`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#info-circle`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#info-square`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#file`"></use>
+      </svg>
+      <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#upload`"></use>
+      </svg>
+        <svg :class="$style['icon']" fill="currentcolor">
+          <use :href="`${iconsPath}#folder`"></use>
+      </svg>
+icons preview:
+
+
+Accessibility
+Structural markup
+Phenom styling and layout can be applied to a wide range of markup structures. This documentation aims to provide developers with best practice examples to demonstrate the use of phenom itself and illustrate appropriate semantic markup, including ways in which potential accessibility concerns can be addressed.
+
+Visually hidden content
+Content which should be visually hidden, but remain accessible to assistive technologies such as screen readers, can be styled using the .phw-visually-hidden class. This can be useful in situations where additional visual information or cues (such as meaning denoted through the use of color) need to also be conveyed to non-visual users.
+
+
+
+<span class="phw-visually-hidden"></span>
+For visually hidden interactive controls, such as traditional “skip” links, use the .phw-visually-hidden-focusable class. This will ensure that the control becomes visible once focused (for sighted keyboard users).
+
+
+
+<a class="phw-visually-hidden-focusable" href="#content">Skip to main content</a>
+ 

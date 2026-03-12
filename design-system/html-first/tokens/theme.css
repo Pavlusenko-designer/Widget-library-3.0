@@ -1,0 +1,212 @@
+:root {
+  /* Base palette from Figma file 70e42OQS0tuBGzY48YixMI, node 51:52. */
+  --palette-primary: #5335a8;
+  --palette-secondary: #ffffff;
+  --palette-background-dark: #272727;
+  --palette-background-light: #f2f2f2;
+  --palette-background-white: #ffffff;
+  --palette-stroke: #bdbdbd;
+  --palette-text-dark: #272727;
+  --palette-text-secondary: #777777;
+  --palette-text-light: #ffffff;
+  --palette-text-placeholder: #a0a0a0;
+  --palette-success: #3ba169;
+  --palette-error: #c31313;
+  --palette-disabled: #b8b8b8;
+
+  /* Semantic aliases used by components. */
+  --color-canvas: var(--palette-background-light);
+  --color-surface: var(--palette-background-white);
+  --color-surface-muted: var(--palette-background-light);
+  --color-surface-inverse: var(--palette-background-dark);
+  --color-text: var(--palette-text-dark);
+  --color-text-muted: var(--palette-text-secondary);
+  --color-text-placeholder: var(--palette-text-placeholder);
+  --color-text-inverse: var(--palette-text-light);
+  --color-primary: var(--palette-primary);
+  --color-primary-contrast: var(--palette-text-light);
+  --color-border: var(--palette-stroke);
+  --color-success: var(--palette-success);
+  --color-error: var(--palette-error);
+  --color-disabled: var(--palette-disabled);
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 0.75rem;
+  --space-lg: 1rem;
+  --space-xl: 1.25rem;
+  --space-2xl: 1.5rem;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-pill: 999px;
+  --roundness-button: 2px;
+  --roundness-input: var(--roundness-button);
+  --roundness-image: 24px;
+  --roundness-container: 24px;
+  --roundness-modal: var(--radius-lg);
+  --type-base-size: 1rem;
+  --type-scale-xs: calc(var(--type-base-size) * 0.75);
+  --type-scale-sm: calc(var(--type-base-size) * 0.875);
+  --type-scale-md: var(--type-base-size);
+  --type-scale-lg: calc(var(--type-base-size) * 1.125);
+  --type-scale-xl: calc(var(--type-base-size) * 1.5);
+  --type-scale-2xl: calc(var(--type-base-size) * 2);
+  --type-scale-3xl: calc(var(--type-base-size) * 2.5);
+  --control-height-compact: calc(var(--type-base-size) * 2.5);
+  --control-height-default: calc(var(--type-base-size) * 3);
+  --control-padding-inline: calc(var(--type-base-size) * 0.875);
+  --control-gap: calc(var(--type-base-size) * 0.625);
+  --control-size-icon-sm: 2rem;
+  --control-size-icon-md: 2.75rem;
+  --control-size-icon-lg: 3.25rem;
+  --icon-size-sm: 1rem;
+  --icon-size-md: 1.25rem;
+  --icon-size-lg: 1.5rem;
+  --focus-ring-width: 4px;
+  --focus-ring-color: color-mix(in srgb, var(--color-primary) 65%, white 35%);
+  --focus-ring-offset: 2px;
+  --container-sm: 40rem;
+  --container-md: 48rem;
+  --container-lg: 64rem;
+  --container-xl: 72rem;
+  --viewport-mobile: 320px;
+  --viewport-tablet: 768px;
+  --viewport-desktop: 1280px;
+  --viewport-widescreen: 1920px;
+  --spacer-small: 2rem;
+  --spacer-medium: 3rem;
+  --spacer-large: 4.5rem;
+
+  /* Typography references derived from the Figma type scale, with user-requested font families. */
+  --font-primary: "Roobert", "Avenir Next", "Segoe UI", sans-serif;
+  --font-secondary: "Roboto", "Segoe UI", sans-serif;
+  --font-sans: var(--font-secondary);
+  --font-button: var(--font-secondary);
+  --font-display: var(--font-primary);
+
+  --type-hero-size: var(--type-scale-3xl);
+  --type-widget-size: var(--type-scale-2xl);
+  --type-card-title-size: var(--type-scale-xl);
+  --type-primary-regular-size: var(--type-scale-lg);
+  --type-large-size: var(--type-scale-lg);
+  --type-secondary-regular-size: var(--type-scale-md);
+  --type-body-size: var(--type-scale-md);
+  --type-small-size: var(--type-scale-sm);
+  --type-label-size: var(--type-scale-md);
+  --type-caption-size: var(--type-scale-sm);
+  --type-input-size: var(--type-scale-md);
+  --type-legal-size: var(--type-scale-xs);
+  --type-heading-line-height: 1.25;
+  --type-body-line-height: 1.5;
+  --type-compact-line-height: 1.2;
+  --type-legal-line-height: 1.4;
+
+  /* Legacy aliases kept so existing CSS can evolve gradually. */
+  --text-small: var(--type-small-size);
+  --text-body: var(--type-body-size);
+  --text-heading: var(--type-hero-size);
+  --text-button-desktop: var(--type-scale-md);
+  --text-button-compact: var(--type-scale-sm);
+
+  --shadow-soft: 0 12px 32px rgba(39, 39, 39, 0.08);
+  --shadow-floating-sm: 0 6px 18px rgba(39, 39, 39, 0.2);
+  --shadow-floating-md: 0 10px 24px rgba(39, 39, 39, 0.26);
+  --overlay-scrim-soft: rgba(39, 39, 39, 0.2);
+  --overlay-scrim-strong: rgba(39, 39, 39, 0.55);
+  --state-hover-bg-light: rgba(39, 39, 39, 0.06);
+  --state-pressed-bg-light: rgba(39, 39, 39, 0.12);
+  --state-hover-bg-dark: rgba(255, 255, 255, 0.14);
+  --state-pressed-bg-dark: rgba(255, 255, 255, 0.22);
+  --state-hover-overlay-inverse: rgba(255, 255, 255, 0.22);
+  --state-hover-overlay-light: rgba(255, 255, 255, 0.12);
+  --radius-full: 999px;
+
+  --dialog-max-width-mobile: 92vw;
+  --dialog-max-width-tablet: 44rem;
+  --dialog-max-width-desktop: 60rem;
+  --dialog-header-padding-inline: 1.25rem;
+  --dialog-header-padding-block: 0.875rem;
+  --dialog-body-padding: 1.25rem;
+
+  --tabs-height: var(--control-height-compact);
+  --tabs-bg: var(--color-surface);
+  --tabs-border: var(--color-border);
+  --tab-active-bg: var(--color-primary);
+  --tab-active-fg: var(--color-primary-contrast);
+  --tab-fg: var(--color-text);
+
+  /* Header/menu pattern tokens for consistent navigation styling. */
+  --menu-item-height: 3.5rem;
+  --menu-item-padding-inline: 1rem;
+  --menu-item-font-size: 1rem;
+  --menu-item-font-weight: 500;
+  --menu-item-color: var(--color-text);
+  --menu-item-active-color: var(--color-text);
+  --menu-item-active-indicator: #63aab4;
+  --menu-item-mobile-bg: var(--color-surface);
+  --menu-item-mobile-open-bg: rgba(242, 242, 242, 0.52);
+  --menu-divider-color: rgba(39, 39, 39, 0.12);
+  --menu-surface: var(--color-surface);
+  --menu-surface-muted: rgba(242, 242, 242, 0.52);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(180deg, var(--palette-background-white) 0%, var(--palette-background-light) 100%);
+  color: var(--color-text);
+  font-family: var(--font-secondary);
+}
+
+.phw-grid-responsive {
+  --phw-grid-cols-current: var(--phw-grid-cols-mobile, var(--phw-grid-cols-default, 1));
+}
+
+@media (min-width: 768px) {
+  .phw-grid-responsive {
+    --phw-grid-cols-current: var(
+      --phw-grid-cols-tablet,
+      var(--phw-grid-cols-mobile, var(--phw-grid-cols-default, 1))
+    );
+  }
+}
+
+@media (min-width: 1280px) {
+  .phw-grid-responsive {
+    --phw-grid-cols-current: var(
+      --phw-grid-cols-desktop,
+      var(--phw-grid-cols-tablet, var(--phw-grid-cols-mobile, var(--phw-grid-cols-default, 1)))
+    );
+  }
+}
+
+@media (min-width: 1920px) {
+  .phw-grid-responsive {
+    --phw-grid-cols-current: var(
+      --phw-grid-cols-widescreen,
+      var(
+        --phw-grid-cols-desktop,
+        var(--phw-grid-cols-tablet, var(--phw-grid-cols-mobile, var(--phw-grid-cols-default, 1)))
+      )
+    );
+  }
+}
+
+.phw-focus-ring:focus-visible,
+.phw-btn:focus-visible,
+.phw-tab:focus-visible,
+.phw-icon-btn:focus-visible,
+a:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}

@@ -1,0 +1,121 @@
+﻿Widgets Created So Far
+
+1. Content Cards Light
+Description: A light-theme analytics widget with a section header and four metric cards. Each card presents a headline metric, a short title, and explanatory copy for quick business scanning.
+Widget ID: content-cards-light
+
+2. Content Cards Dark
+Description: Dark-theme version of the analytics metric-card layout. Keeps the same information hierarchy as Widget 1 but adapted for inverse surfaces and dark UI contexts.
+Widget ID: content-cards-dark
+
+3. Media Cards Light
+Description: A light-theme step-by-step journey widget combining image-led cards, supporting text, and inline links. Built for process storytelling and onboarding flows.
+Widget ID: media-cards-light
+
+4. Media Cards Dark
+Description: Dark-theme counterpart of the media journey card layout. Useful when the page section uses dark backgrounds but needs the same step-content structure.
+Widget ID: media-cards-dark
+
+5. Video Popup Light
+Description: Light-theme video card gallery where each card can open a modal player. Supports title, subtitle, poster image, and video source, including a fallback state when video URL is missing.
+Widget ID: video-popup-light
+
+6. Video Popup Dark
+Description: Dark-theme variant of the video popup gallery with the same card behavior and modal playback pattern, adapted for inverse color contexts.
+Widget ID: video-popup-dark
+
+7. Event Recommendations Light
+Description: Light-theme event discovery widget using a bento-style grid. Designed for fast scanning of event cards with metadata such as date/topic/location and featured positioning.
+Widget ID: event-recommendations-light
+
+8. Event Recommendations Dark
+Description: Dark-theme version of the bento event recommendations layout. Preserves featured-card emphasis and metadata readability on dark surfaces.
+Widget ID: event-recommendations-dark
+
+9. Meet the Team Light
+Description: Light-theme interactive team carousel/stack showing member profile cards with role and bio. Includes navigation controls and active-card state management.
+Widget ID: meet-the-team-light
+
+10. Meet the Team Dark
+Description: Dark-theme version of the team stack widget with the same card interactions and navigation controls for inverse UI sections.
+Widget ID: meet-the-team-dark
+
+11. Company Projects Light
+Description: Light-theme projects showcase widget with a selectable project list and synchronized media panel. Built for highlighting key initiatives with expandable details.
+Widget ID: company-projects-light
+
+12. Company Projects Dark
+Description: Dark-theme project showcase variant, keeping the same list-to-media interaction model and content structure as Widget 11.
+Widget ID: company-projects-dark
+
+13. FAQ Accordion Light
+Description: Light-theme FAQ accordion with expandable/collapsible answers, icon state changes, and animated panel transitions for structured help content.
+Widget ID: faq-accordion-light
+
+14. FAQ Accordion Dark
+Description: Dark-theme FAQ accordion matching Widget 13 behavior, optimized for readability and interaction contrast in inverse sections.
+Widget ID: faq-accordion-dark
+
+15. Promo Banner Light
+Description: Light-theme promotional banner block with strong visual focus, headline copy, and call-to-action area. Intended for campaign or announcement placements.
+Widget ID: promo-banner-light
+
+16. Promo Banner Dark
+Description: Dark-theme promotional banner counterpart with the same promotional messaging structure and CTA emphasis.
+Widget ID: promo-banner-dark
+
+17. Classic Card Grid
+Description: Multi-card light-theme grid layout for editorial or informational content. Supports card image, eyebrow/meta text, title, description, and bottom action link.
+Widget ID: classic-card-grid
+
+18. Immersive Media Card Grid
+Description: Full-image card grid where media dominates each card and text overlays provide title/subtitle context. Designed for high-visual storytelling sections.
+Widget ID: full-image-card-grid
+
+19. Immersive Media Grid Interactive
+Description: Interactive version of the immersive full-image grid with richer reveal behavior and dynamic card interactions while keeping CMS-friendly card structure.
+Widget ID: full-image-card-grid-dynamic
+
+20. Hero Search Banner
+Description: Full-bleed hero banner with image background, caption/title/subtitle, and dual-field job search form (role/department and location) plus primary submit action.
+Widget ID: hero-search-banner
+
+21. Video Hero Job Search
+Description: Hero search widget with autoplay video background and top-corner play/pause control. Combines motion-led branding with job search form interaction.
+Widget ID: hero-video-search-banner
+
+22. Centered Hero Job Search
+Description: Center-aligned hero search variant of Widget 20, emphasizing intro messaging while retaining dual search fields and primary search CTA.
+Widget ID: hero-search-banner-centered
+
+23. Centered Hero Action Banner
+Description: Center-aligned hero variant that replaces search inputs with two clear CTA buttons (primary + secondary) for action-first navigation.
+Widget ID: hero-search-banner-centered-buttons
+
+24. Horizontal Split Card
+Description: 50/50 horizontal split layout with content section and media section. Includes caption, heading, subtitle, and dual action buttons for balanced narrative + visual presentation.
+Widget ID: horizontal-split-card
+
+25. Logo Marquee
+Description: Infinite scrolling logo strip widget with normalized logo-item sizing for consistent brand presentation and continuous motion.
+Widget ID: logo-marquee
+
+26. Recommended Jobs Feed
+Description: Dynamic recommended-jobs widget powered by a fake DB adapter. Displays job cards with title, department, metadata pills, save action, and role link for future API replacement.
+Widget ID: recommended-jobs-dynamic
+
+27. Recommended Jobs Spotlight
+Description: Redesigned dynamic recommended-jobs experience with spotlight composition (featured job + supporting jobs), save actions, metadata tags, and link-style card actions.
+Widget ID: recommended-jobs-dynamic-v2
+
+28. Recommended Jobs One Column
+Description: Single-column compact variant of the recommended-jobs feed. Shows 3 cards, keeps save actions, and places the primary "View all jobs" CTA below the cards.
+Widget ID: recommended-jobs-dynamic-one-column
+
+29. Resume Search Light
+Description: Light-theme resume-driven matching widget with CTA that opens a modal. Modal supports resume file upload, consent checkbox, and gated submit state before matching.
+Widget ID: resume-search-light
+
+30. Company Stats Static
+Description: Static four-card company-statistics widget with key numeric highlights and supporting context, designed for trust-building and employer brand credibility.
+Widget ID: company-stats-static
