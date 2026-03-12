@@ -1,3 +1,7 @@
 [build]
-  publish = "preview"
+  publish = "."
 
+[[redirects]]
+  from = "/"
+  to = "/preview/"
+  status = 302
