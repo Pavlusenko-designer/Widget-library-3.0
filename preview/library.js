@@ -15,7 +15,7 @@
   stack,
   tabs,
   text
-} from "../design-system/html-first/index.js";
+} from "./design-system/html-first/index.js";
 
 const iconNames = ["play", "pause", "save", "close", "chevronRight", "file", "plus", "minus"];
 
@@ -189,3 +189,5 @@ function renderProperties() {
 renderFoundations();
 renderComponents();
 renderProperties();
+
+

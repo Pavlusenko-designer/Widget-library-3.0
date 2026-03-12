@@ -1,4 +1,4 @@
-﻿import { button, container, grid, heading, icon, iconButton, image, input, link, stack, text } from "../design-system/html-first/index.js";
+﻿import { button, container, grid, heading, icon, iconButton, image, input, link, stack, text } from "./design-system/html-first/index.js";
 import { getRecommendedJobs, getRecommendedJobsEndpoint } from "./mock-db/recommended-jobs-db.js";
 
 function renderSectionHeader({
@@ -1939,6 +1939,7 @@ export function renderWidget(definition) {
     ${definition.render()}
   </section>`;
 }
+
 
 
 
